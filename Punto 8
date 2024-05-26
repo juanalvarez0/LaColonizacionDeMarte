@@ -1,0 +1,77 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def mostrar_informacion(opcion):
+    if opcion == 1:
+        info = ("La nave espacial Starship de SpaceX y el cohete Super Heavy -denominados "
+                "conjuntamente Starship- representan un sistema de transporte totalmente "
+                "reutilizable diseñado para llevar tripulación y carga a la órbita terrestre, "
+                "la Luna, Marte y más allá. Starship es el vehículo de lanzamiento más potente "
+                "del mundo jamás desarrollado, capaz de transportar hasta 150 toneladas métricas "
+                "totalmente reutilizables y 250 toneladas métricas prescindibles.")
+    elif opcion == 2:
+        info = ("El desarrollo y la fabricación de Starship tienen lugar en Starbase, uno de los "
+                "primeros puertos espaciales comerciales diseñados para misiones orbitales. Situado "
+                "en el condado de Cameron, Texas del Golfo de México, Starbase es uno de los cuatro "
+                "centros de lanzamiento activos en Estados Unidos operados por SpaceX. Es el primero "
+                "optimizado para Starship, que puede transportar satélites, cargas útiles, tripulación "
+                "y carga a diversas órbitas y lugares de aterrizaje en la Tierra, la Luna o Marte.")
+    elif opcion == 3:
+        info = ("En 2021, SpaceX inició la construcción de la torre de lanzamiento y captura en Starbase. "
+                "La torre se eleva ~480 pies de altura -la torre de lanzamiento más alta del mundo- y está "
+                "diseñada para soportar el lanzamiento, la integración del vehículo y la captura del cohete "
+                "acelerador Super Heavy. La captura del cohete reduce la masa del vehículo de lanzamiento, "
+                "traslada la complejidad del hardware al suelo y permite la rápida reutilización del cohete.\n"
+                "Los dos brazos robóticos gigantes de la torre elevan y apilan el Starship sobre el Super Heavy "
+                "para su integración final antes del vuelo. Tras el despegue, y después de que las dos etapas "
+                "se separen en vuelo, Super Heavy regresará al lugar de lanzamiento, volverá a encender sus motores "
+                "para ralentizar el vehículo, y los brazos de la torre recogerán el cohete propulsor antes de volver "
+                "a apilarlo en el soporte de lanzamiento orbital para su próximo vuelo.")
+    elif opcion == 4:
+        info = ("Paralelamente al desarrollo y las pruebas de naves estelares, la construcción de una fábrica estelar "
+                "está muy avanzada en la base estelar, con el objetivo de producir y lanzar varias naves estelares cada semana. "
+                "Starbase emplea directamente a más de 1.800 trabajadores, lo que la convierte en la mayor empresa de la zona, "
+                "y la actividad económica generada por SpaceX sustenta otros miles de puestos de trabajo en el condado de Cameron "
+                "y en el Valle del Río Grande. SpaceX se enorgullece de formar parte activa de la comunidad local. Los empleados "
+                "de Starbase participan en eventos locales y se ofrecen regularmente como voluntarios para ayudar en la limpieza "
+                "de playas, llevar a cabo actividades de divulgación comunitaria y educativa, además de contribuir directamente "
+                "a nuestra misión de hacer realidad un futuro multiplanetario.")
+    else:
+        info = ""
+    
+    if info:
+        messagebox.showinfo("Información", info)
+
+def salir():
+    ventana.quit()
+
+# Crear la ventana principal
+ventana = tk.Tk()
+ventana.title("Información de SpaceX")
+
+# Establecer el tamaño de la ventana
+ventana.geometry("500x400")
+
+# Agregar título y descripción
+titulo = tk.Label(ventana, text="Bienvenido a SpaceX Info", font=("Helvetica", 16, "bold"))
+titulo.pack(pady=10)
+
+descripcion = tk.Label(ventana, text="Seleccione una opción para obtener más información:", font=("Helvetica", 12))
+descripcion.pack(pady=10)
+
+# Crear los botones con estilo mejorado
+boton1 = tk.Button(ventana, text="SOBRE EL COHETE", font=("Helvetica", 12), width=40, height=2, command=lambda: mostrar_informacion(1))
+boton2 = tk.Button(ventana, text="LA ENTRADA A MARTE", font=("Helvetica", 12), width=40, height=2, command=lambda: mostrar_informacion(2))
+boton3 = tk.Button(ventana, text="LA TORRE DE LANZAMIENTO Y CAPTURA DE COHETES MÁS ALTA DEL MUNDO", font=("Helvetica", 12), width=40, height=2, command=lambda: mostrar_informacion(3))
+boton4 = tk.Button(ventana, text="CONSTRUYENDO UN FUTURO MÁS EMOCIONANTE", font=("Helvetica", 12), width=40, height=2, command=lambda: mostrar_informacion(4))
+boton5 = tk.Button(ventana, text="SALIR", font=("Helvetica", 12), width=40, height=2, command=salir)
+
+# Ubicar los botones en la ventana
+boton1.pack(pady=5)
+boton2.pack(pady=5)
+boton3.pack(pady=5)
+boton4.pack(pady=5)
+boton5.pack(pady=5)
+
+# Iniciar el bucle principal de la ventana
+ventana.mainloop()
