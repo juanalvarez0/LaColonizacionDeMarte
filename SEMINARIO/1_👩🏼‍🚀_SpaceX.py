@@ -12,7 +12,7 @@ st.image("https://techreport.com/wp-content/uploads/2023/09/Key-SpaceX-Statistic
 st.header("¿Qué es SpaceX?")
 "Space Exploration Technologies Corp., conocida como SpaceX, es una empresa estadounidense de fabricación aeroespacial y de servicios de transporte espacial con sede en Hawthorne (California). Fue fundada en 2002 por Elon Musk con el objetivo de reducir los costes de viajar al espacio para facilitar la colonización de Marte. SpaceX ha desarrollado varios vehículos de lanzamiento, la constelación Starlink, la nave de carga Dragon y llevado astronautas a la Estación Espacial Internacional en la Dragon 2."
 
-st.header("Nuestros logos")
+st.header("Nuestros logros")
 
 "- Primer cohete de financiación privada en alcanzar la órbita (Falcon 1 Vuelo 4 — 28 de septiembre de 2008)."
 "- Primera compañía de financiación privada que lanza, pone en órbita y recupera una nave espacial (Falcon 9 Vuelo 2 — 9 de diciembre de 2010)."
